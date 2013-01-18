@@ -1,0 +1,22 @@
+---
+layout : default
+title :  Still Life Home
+---
+
+<div class="container">
+	<h1>Hello. This is still life. </h1>
+</div>
+<div class="container">  
+	<ul>
+		<li>If you like to know more about <a href="about.html">me</a>.</li>
+		<li>A brief list of <a href="recently-read-books.html">books I've recently read.</a></li>
+	</ul>
+</div>
+<div>
+  <h3>Posts</h3>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
